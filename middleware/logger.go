@@ -3,11 +3,12 @@ package middleware
 import (
 	"bytes"
 	"encoding/json"
-	"go.uber.org/zap"
 	"io"
 	"net/http"
 	"qp/qLog"
 	"time"
+
+	"go.uber.org/zap"
 
 	"github.com/gin-gonic/gin"
 )
