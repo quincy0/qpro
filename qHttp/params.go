@@ -10,6 +10,12 @@ type requestParamsDto struct {
 	timeout     uint32         // 接口超时时间，默认3000毫秒
 	header      http.Header    // 请求header头
 	contentType string
+	basicAuth   *BasicAuth
+}
+
+type BasicAuth struct {
+	Username string
+	Password string
 }
 
 type ReqParamsOption func(*requestParamsDto)
@@ -28,5 +34,14 @@ func WithReqHeader(header http.Header) ReqParamsOption {
 func WithContentType(contentType string) ReqParamsOption {
 	return func(params *requestParamsDto) {
 		params.contentType = contentType
+	}
+}
+
+func SetBasicAuth(username, password string) ReqParamsOption {
+	return func(params *requestParamsDto) {
+		params.basicAuth = &BasicAuth{
+			Username: username,
+			Password: password,
+		}
 	}
 }

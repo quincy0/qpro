@@ -20,14 +20,8 @@ type Setting struct {
 	Redis       Redis       `mapstructure:"redis"`
 	Jwt         Jwt         `mapstructure:"jwt"`
 	Email       Email       `mapstructure:"email"`
-	MingMang    MingMang    `mapstructure:"mingmang"`
-	BDH         BDH         `mapstructure:"bdh"`
-	VBee        VBee        `mapstructure:"vbee"`
 	Kafka       Kafka       `mapstructure:"kafka"`
-	AzureTTS    AzureTTS    `mapstructure:"azuretts"`
 	US3         US3         `mapstructure:"us3"`
-	TX          TX          `mapstructure:"tx"`
-	CNTX        TX          `mapstructure:"cntx"`
 	Task        Task        `mapstructure:"task"`
 }
 
@@ -90,33 +84,11 @@ type Email struct {
 	Password string `mapstructure:"password"`
 }
 
-type MingMang struct {
-	AppId   string `mapstructure:"appId"`
-	UserKey string `mapstructure:"userKey"`
-}
-
-type BDH struct {
-	AppId      string `mapstructure:"appId"`
-	AppKey     string `mapstructure:"userKey"`
-	WSDomain   string `mapstructure:"wsDomain"`
-	HTTPDomain string `mapstructure:"httpDomain"`
-}
-
-type VBee struct {
-	AppId string `mapstructure:"appId"`
-	Token string `mapstructure:"token"`
-}
-
 type Kafka struct {
 	Brokers string `mapstructure:"brokers"`
 	Topics  string `mapstructure:"topics"`
 	Group   string `mapstructure:"group"`
 	Version string `mapstructure:"version"`
-}
-
-type AzureTTS struct {
-	URL string `mapstructure:"url"`
-	Key string `mapstructure:"key"`
 }
 
 type US3 struct {
@@ -126,18 +98,6 @@ type US3 struct {
 	FileHost        string `mapstructure:"fileHost"`
 	BucketName      string `mapstructure:"bucketName"`
 	VerifyUploadMD5 bool   `mapstructure:"VerifyUploadMD5"`
-}
-
-type TX struct {
-	Appkey               string `mapstructure:"appkey"`
-	AccessToken          string `mapstructure:"accessToken"`
-	TxRequestTimeout     uint32 `mapstructure:"txRequestTimeout"`
-	MaxConcurrentSession int    `mapstructure:"maxConcurrentSession"`
-	HTTPDomain           string `mapstructure:"HTTPDomain"`
-	WSSDomain            string `mapstructure:"WSSDomain"`
-	PushKey              string `mapstructure:"pushKey"`
-	PushURL              string `mapstructure:"pushURL"`
-	PullURL              string `mapstructure:"pullURL"`
 }
 
 type Task struct {
