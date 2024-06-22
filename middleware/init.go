@@ -2,8 +2,9 @@ package middleware
 
 import (
 	"net/http"
-	"qp/qConfig"
-	"qp/qLog"
+
+	"github.com/quincy0/qpro/qConfig"
+	"github.com/quincy0/qpro/qLog"
 
 	"github.com/gin-contrib/pprof"
 

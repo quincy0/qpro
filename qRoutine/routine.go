@@ -2,9 +2,9 @@ package qRoutine
 
 import (
 	"context"
-	"qp/qRoutine/rescue"
-
 	"time"
+
+	"github.com/quincy0/qpro/qRoutine/rescue"
 
 	"go.opentelemetry.io/otel/trace"
 )

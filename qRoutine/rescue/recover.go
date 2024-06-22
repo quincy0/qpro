@@ -2,7 +2,7 @@ package rescue
 
 import (
 	"context"
-	"qp/qLog"
+	"github.com/quincy0/qpro/qLog"
 
 	"go.uber.org/zap"
 )

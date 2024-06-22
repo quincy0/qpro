@@ -5,8 +5,9 @@ import (
 	"encoding/json"
 	"io"
 	"net/http"
-	"qp/qLog"
 	"time"
+
+	"github.com/quincy0/qpro/qLog"
 
 	"go.uber.org/zap"
 

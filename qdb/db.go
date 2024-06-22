@@ -4,10 +4,11 @@ import (
 	"database/sql"
 	"fmt"
 	"os"
-	"qp/qConfig"
-	"qp/qLog"
-	"qp/qdb/driver"
 	"strings"
+
+	"github.com/quincy0/qpro/qConfig"
+	"github.com/quincy0/qpro/qLog"
+	"github.com/quincy0/qpro/qdb/driver"
 
 	"go.uber.org/zap"
 	"gorm.io/gorm"

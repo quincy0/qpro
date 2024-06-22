@@ -6,10 +6,11 @@ import (
 	"io/ioutil"
 	"net/http"
 	"os"
-	"qp/qConfig"
-	"qp/qLog"
 	"strconv"
 	"time"
+
+	"github.com/quincy0/qpro/qConfig"
+	"github.com/quincy0/qpro/qLog"
 
 	"github.com/gin-gonic/gin"
 	"github.com/prometheus/client_golang/prometheus"

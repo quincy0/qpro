@@ -9,10 +9,11 @@ import (
 	"io"
 	"net/http"
 	neturl "net/url"
-	"qp/qLog"
 	"strconv"
 	"strings"
 	"time"
+
+	"github.com/quincy0/qpro/qLog"
 
 	"github.com/google/uuid"
 

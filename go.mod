@@ -1,4 +1,4 @@
-module qp
+module github.com/quincy0/qpro
 
 go 1.20
 

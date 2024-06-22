@@ -3,7 +3,8 @@ package qTrace
 import (
 	"context"
 	"log"
-	"qp/qConfig"
+
+	"github.com/quincy0/qpro/qConfig"
 
 	"go.opentelemetry.io/otel/trace"
 

@@ -3,9 +3,10 @@ package qRedis
 import (
 	"context"
 	"fmt"
-	"qp/qConfig"
-	"qp/qLog"
 	"time"
+
+	"github.com/quincy0/qpro/qConfig"
+	"github.com/quincy0/qpro/qLog"
 
 	"github.com/redis/go-redis/extra/redisotel/v9"
 	"github.com/redis/go-redis/v9"

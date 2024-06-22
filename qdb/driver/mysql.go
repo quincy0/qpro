@@ -2,8 +2,9 @@ package driver
 
 import (
 	"bytes"
-	"qp/qConfig"
 	"strconv"
+
+	"github.com/quincy0/qpro/qConfig"
 
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
