@@ -158,6 +158,9 @@ func do(ctx context.Context, req *requestParamsDto) *ResponseDto {
 		request, err = http.NewRequest(methodDelete, req.Path, nil)
 	}
 
+	if req.basicAuth != nil {
+		request.SetBasicAuth(req.basicAuth.Username, req.basicAuth.Password)
+	}
 	if len(req.header) > 0 {
 		for k, v := range req.header {
 			if len(v) > 0 {
@@ -222,7 +225,7 @@ func do(ctx context.Context, req *requestParamsDto) *ResponseDto {
 		"requestEnd",
 		zap.Uint32("requestId", requestId),
 		zap.String("path", req.Path),
-		zap.String("body", string(bodyByt)),
+		//zap.String("body", string(bodyByt)),
 		zap.Int64("timeDuration", time.Now().UnixMilli()-startRequestTime),
 		zap.String("endTime", time.Now().Format("2006-01-02 15:04:05.9999")),
 	)
