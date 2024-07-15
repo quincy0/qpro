@@ -23,6 +23,7 @@ type Setting struct {
 	Kafka       Kafka       `mapstructure:"kafka"`
 	US3         US3         `mapstructure:"us3"`
 	Task        Task        `mapstructure:"task"`
+	SuccessCode int         `mapstructure:"successcode"`
 }
 
 type Application struct {

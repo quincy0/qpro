@@ -1,5 +1,7 @@
 package app
 
+import "github.com/quincy0/qpro/qConfig"
+
 type Response[T any] struct {
 	Code    int    `json:"code"`    // 错误码
 	Data    T      `json:"data"`    // 返回数据
@@ -16,7 +18,7 @@ type Page[T any] struct {
 }
 
 func (res *Response[T]) ReturnOK() *Response[T] {
-	res.Code = 0
+	res.Code = qConfig.Settings.SuccessCode
 	res.Success = true
 	return res
 }
